@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html ng-app="PearsonVegas">
+  <head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<link rel="shortcut icon" href="img/favicon.ico" />
+  	<link href='https://fonts.googleapis.com/css?family=Roboto:300 |Grand+Hotel' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Pearson Goes Vegas</title>  
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>   
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>    
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src='questions.json'></script>
+	<style>#map {width: 70%; height: 300px; margin: 1em auto;}</style>
+	<script>
+
+	<!-- JQUERY FOR SLIDING NAVIGATION -->   
+	$(document).ready(function() {
+	  $('a[href*=#]').each(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+	    && location.hostname == this.hostname
+	    && this.hash.replace(/#/,'') ) {
+	      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+	      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+	       if ($target) {
+	         var targetOffset = $target.offset().top;
+
+	<!-- JQUERY CLICK FUNCTION REMOVE AND ADD CLASS "ACTIVE" + SCROLL TO THE #DIV-->   
+	         $(this).click(function() {
+	            $("#nav li a").removeClass("active");
+	            $(this).addClass('active');
+	           $('html, body').animate({scrollTop: targetOffset}, 1000);
+	           return false;
+	         });
+	      }
+	    }
+	  });
+	});
+
+	</script>
+</head>
+
+<body>	
+	<!-- Header Start -->
+	<header id="header">
+		<nav id="nav">
+			<ul>
+				<li><a href="#slide1" class="active" title="Next Section" >WELCOME</a></li>
+				<li><a href="#slide2" title="Next Section">SCHEDULE</a></li>
+				<li><a href="#slide3" title="Next Section">HOUSE of PAIN</a></li>
+				<li><a href="#slide4" title="Next Section">ATTENDEES</a></li>
+			</ul>
+		</nav>
+
+		<button class="hamburger">&#9776;</button>
+  		<button class="cross">&#735;</button>
+
+	</header>
+	<!-- Header End -->
+
+	<!-- Drop Down Menu -->
+	 <div class="menu">
+	 	<ul>
+		    <a href="#slide1"><li>WELCOME</li></a>
+		    <a href="#slide2"><li>SCHEDULE</li></a>
+		    <a href="#slide3"><li>HOUSE of PAIN</li></a>
+		    <a href="#slide4"><li>ATTENDEES</li></a>
+	 	</ul>
+	</div> 
+
+ 	<!-- Slider 1, Landing Page -->
+
+	<div id="slide1">
+		<div class="landing_container">
+            <img src="img/vegas_sign.gif" id="sign">
+            <table id="dateBlock">
+          		<tr>
+            		<td id="date"><h3>October 7 - 10, 2016</h3></td>
+            	</tr>
+            	<tr>
+            		<td id="attendButton"><a href="#slide4" title="Next Section"><h3>I Will Attend</h3></a></td>
+            	</tr>
+            </table>
+		</div> 
+		<div id="countdownBar">
+			<table id="countdown">
+            	<tr>
+	            	<td><h4>DAYS</h4></td>
+	            	<td><h4>HOURS</h4></td>
+	            	<td><h4>MINUTES</h4></td>
+            		<td><h4>SECONDS</h4></td>  		
+            	</tr>
+            	<tr class="clock">
+	            	<td id="days">#</td>
+	            	<td id="hours">#</td>
+	            	<td id="minutes">#</td>
+	            	<td id="seconds">#</td>  		
+            	</tr>
+        	</table>
+        </div>
+    </div> 
+
+ 	<!-- Slider 2, Event Page -->
+    <div id="slide2">
+        <div class="event_container">	
+            <h2 class="yellow">Schedule of Events</h2>
+           	<table id="eventTable">
+      		    <thead>
+          			<tr>
+			           <th id="dateCol" scope="col">DAY</th>
+			           <th id="eventCol" scope="col">EVENT</th>
+			           <th id="locationCol" scope="col">LOCATION</th>
+			        </tr>
+        		</thead>
+	      		<tbody id="events">
+			        <tr>
+			           <th scope="row">Thursday</th>
+			           <td><a href="https://www.bellagio.com/en/casino/poker.html" class="white">Poker at the Bellagio</a></td>
+			           <td><a href= "https://www.google.com/maps/place/Bellagio+Hotel+and+Casino/@36.1126264,-115.1788938,17z/data=!3m1!4b1!4m5!3m4!1s0x80c8c430cb5147bd:0x82f2c7c5d9d10d84!8m2!3d36.1126264!4d-115.1767051" class="white">3600 Las Vegas Blvd</a></td>
+			        </tr>
+			        <tr>
+			           <th scope="row">Friday</th>
+			           <td>Dinner at &eacute by Jos&eacute Andr&eacuteas</td>
+			           <td><a href="https://www.google.com/maps/place/%C3%A9+by+Jos%C3%A9+Andr%C3%A9s/@36.1095493,-115.1764772,17z/data=!3m1!4b1!4m5!3m4!1s0x80c8c431a8ffb015:0x747f85df7f106007!8m2!3d36.1095493!4d-115.1742885" class="white">3708 S Las Vegas Blvd</td>
+			        </tr>
+			        <tr>
+			           <th scope="row"></th>
+			           <td>Karoke</td>
+			           <td>TBD</td>
+			        </tr>
+			        <tr>
+			           <th scope="row">Saturday</th>
+			           <td>Racecars, Shooting Range</td>
+			           <td>TBD</td>
+			        </tr>
+			        <tr>
+			           <th scope="row"></th>
+			           <td><a href="http://xslasvegas.com/" class="white">XS Nightclub</a></td>
+			           <td><a href="https://www.google.com/maps/place/XS+Las+Vegas/@36.1280185,-115.1669625,17z/data=!3m1!4b1!4m5!3m4!1s0x80c8c414f11eb46f:0xf628131a7ed6deaa!8m2!3d36.1280185!4d-115.1647738" class="white">3131 S Las Vegas Blvd</a></td>
+			        </tr>
+			        <tr>
+			           <th scope="row">Sunday</th>
+			           <td><a href="http://www.venetian.com/casino/race-and-sports-book.html" class="white">Football at the Venetian Sports Book</a></td>
+			           <td><a href="https://www.google.com/maps/place/The+Venetian+Race+%26+Sports+Book/@36.1243076,-115.1707988,17z/data=!3m1!4b1!4m5!3m4!1s0x80c8c41586e8cbf1:0x6d463f6c97bdfc99!8m2!3d36.1243076!4d-115.1686101" class="white" >The Grand Canal Shoppes</a></td>
+			        </tr>
+	        	</tbody>
+	    	</table>
+	    	 <div id="map"></div>
+			    <script async defer
+			        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABppnExWx3UsVRhrCw1k4dkmKf8Ew2cz0&callback=initMap">
+			    </script>
+		</div> 
+    </div>
+
+    <!-- Slider 3, House of Pain Trivia Page -->
+    <div id="slide3">
+    	<div class="hop_container">
+    	<h1 class="yellow">House of Pain Trivia</h1>
+			<div class="quiz_container">
+	  			<div id="quiz"></div>
+	    		<div class="button" id="next"><a href="#">Next</a></div>
+	    		<div class="button" id="prev"><a href="#">Prev</a></div>
+	    		<div class="button" id="start"> <a href="#">Start Over</a></div>
+    		</div>
+    	</div>
+    </div>
+
+    <!-- Slider 4, Signup Page --> 	 	
+	<div id="slide4">
+		<div class="signup_container">
+		<h2 class="grey">Sign Up</h2>
+			<form ng-submit="createCtrl.create()"ng-controller="CreateAttendeeController as createCtrl">
+           		<input class="signupInput" ng-model="createCtrl.name" type="text" placeholder="Name" /><br/>
+            	<input class="signupInput" ng-model="createCtrl.comment" type="text" placeholder="Comment" /><br/>
+            	<button id="signUp">I'm Coming!</button>
+        	</form>
+        </div>
+        <br />
+        <h2 class="grey">Attendees</h2>
+        <div class="attendees_container">
+            <ul ng-controller="AttendeesListController as attendeesCtrl">
+            	<li class="attendees" ng-repeat="attendee in attendeesCtrl.attendees"><strong>{{attendee.name}}</strong> - {{attendee.comment}}</li>
+            </ul>
+		</div> 
+	</div> 		
+
+    <!-- Footer --> 
+	<div id="copyright">
+		&copy; 2016 Pauline Hilborn &bull;<a href="http://philbo.design/wp" target="_blank"> http://philbo.design</a> &bull; New York City 
+	</div> 
+	
+</body>
+</html>

@@ -1,0 +1,498 @@
+/*Pearson in Vegas General Styling*/
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: lighter;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+	font-weight: lighter;
+   	font-family:'Roboto', sans-serif ;
+   	font-size: 3em;
+  	text-align: center;
+  	margin: 1em auto;
+}
+
+h2 {
+	font-family: 'Grand Hotel', cursive;
+	font-size: 2em;
+	font-weight: bolder;
+	text-align: center;
+	margin: .5em;
+}
+
+h3 {
+	font-size: 1.5em;
+	font-weight:lighter;
+	text-align: center;
+}
+
+h4 {
+	font-size: 1.25em;
+	font-weight:lighter;
+	text-align: center;
+}
+
+.yellow {
+	color: #fff200;
+}
+
+.grey {
+	color: #5a5a5a;
+}
+
+/*Header and Navigation*/
+
+#header { 
+	width: 100%; 
+	background: url('../img/header-bg.png'); 
+	height: 4em; 	
+	position: fixed;
+}
+
+.hamburger, .cross, .menu {
+	display: none;
+}
+
+#nav {float: right; margin-top: 1em; }
+#nav ul{
+	list-style: none;
+	display: block;
+	margin: 0 auto;	
+}
+
+#nav li{
+	margin: 1em;	
+	float: left;
+	padding-left: 0;
+}
+
+#nav li a { 
+	color: #fff; 
+	opacity:0.6; 
+	font-size: 1em; 
+	text-decoration: none;
+}
+
+#nav li a.active { 
+	color: #fff; 
+	opacity:1; 
+	border-bottom: 2px solid #fff;
+}
+
+#nav li a:hover { 
+	color: #fff; 
+	opacity:1;  
+}
+
+/* General Slider Styling*/
+
+#slide1, #slide2, #slide3, #slide4 { 
+	width: 100%; 
+	height: 100vh;
+}
+
+/*//////////////Slider1 Landing Page //////////////*/
+
+#slide1{
+	background:url('../img/vegas.jpg') 100% 0 no-repeat fixed;
+	background-size: cover;
+}
+
+.landing_container {
+	margin: 0 auto; 
+	width: 90%; 
+}
+
+#sign {
+	width: 40%;
+	margin-top: 3em;
+	z-index: 1;
+}
+
+table[id="dateBlock"] {
+	max-width: 20%;
+  	margin: -250px auto;
+  	margin-right: 10em;
+}
+
+td[id="date"] {
+	height: 4em;
+	color: #fff200;
+}
+
+td[id="attendButton"] {
+  background: #fff200;
+  height: 3em;
+}
+
+a {
+ text-decoration: none;
+ color: #000;
+}
+
+#countdownBar {
+  width: 100%;
+  background: #fff200;
+  margin: auto;
+  position: absolute;
+  bottom: 0;
+}
+
+table[id="countdown"]{
+  width: 40%;
+  background: #fff200;
+  margin: auto;
+  margin-bottom: 0;
+}
+
+.clock {
+	font-size: 1.25em;
+   	font-weight: bold;
+   	text-align: center;
+   	margin: 5px 0;
+	position: relative;
+}
+
+#countdown td {
+	width: 10em;
+}
+
+/*/////////////Slider 2 Schedule of Events////////////*/
+
+#slide2 {
+	background-color: #000;
+	overflow: hidden;
+	padding: 5em 0;
+}
+
+.white {
+	color: #fff;
+}
+
+.event_container { 
+	width: 70%; margin: 0 auto; 
+}
+
+table[id="eventTable"]{
+  width: 100%;
+  margin: 2em auto;
+}
+
+thead th {
+  color: #fff200;
+  font-weight: lighter;
+}
+
+tbody[id="events"] {
+  font-size: 1.5em;
+  color: #fff;
+  font-weight: lighter;
+  padding: .3em;
+}
+
+#dateCol {
+	width: 20%;
+	font-size: 1.25em;
+}
+
+#eventCol {
+	width: 40%;
+	font-size: 1.25em;
+}
+
+#locationCol {
+	width: 40%;
+	font-size: 1.25em;
+}
+
+/*/////////////Slider 3 Quiz////////////*/
+
+#slide3 {
+	background: url(../img/pearson.jpg) 50% 0 no-repeat fixed;
+	color: #fff;
+	padding: 4em 0;	
+	background-size: cover;
+}
+
+.hop_container {
+	margin: 0 auto; 
+	width: 90%; 
+}
+
+ .quiz_container { 
+	width:50%;
+    margin:auto;
+    padding: 1em 3em 3em 5em;
+    background-color: #fff;
+    color: #000000;
+    opacity: 0.8;
+    border-radius:5px;
+}
+
+p, .answers {
+   	font-size: 1.5em;
+}
+
+.button {
+    border:2px solid;
+    border-radius:5px;
+    width: 50px;
+    text-align: center;
+    padding-left:5px;
+    padding-right: 5px;
+    position: relative;
+    float:right;
+    background-color: #fff200;
+    color: black;
+    margin: 0 2px 0 2px;
+}
+
+.button.active {
+    background-color: #5a5a5a;
+    color: #525252;
+}
+
+.button a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 1em;
+}
+
+#prev {
+    display:none;
+}
+
+#start {
+    display:none;
+    width: 7em;
+    padding: .5em;
+}
+
+/*/////////////Slider 4 Signup////////////*/
+
+#slide4 {
+	background-color: #fff200;
+	color: #333333;
+	height: 85vh;
+	padding: 4em 0;
+}
+
+form {
+	margin: .5em 35%;	
+}
+
+.signupInput {
+	font-size: 1.25em;
+	text-align: center;
+  	color: #bbb;
+  	font-family: 'Roboto', sans-serif; 
+  	margin: 0 auto;
+	width: 90%;
+	height: 2em;
+	padding: .5em;
+	border-radius: 4px;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+#signUp {
+	width: 35%;
+	font-size: 1em; 
+	background-color: #bbb;
+	color: #fff;
+	margin: 1em 32%;
+	padding: .5em;
+	border-radius: 4px;
+	box-shadow: 10px 10px 5px #888888;
+}
+
+.attendees {   
+   	font-size: 1.5em;
+  	text-align: center;
+  	margin: .5em auto;
+  	list-style: none;
+}
+
+.attendees_container { 
+	height: 40vh;
+	width: 60%;
+	margin: .5em auto; 
+	color: #bbb;
+	background-color:#FFFFFF; 
+	border-radius:8px; 
+	box-shadow:10px 10px 5px #888888;
+	overflow: auto;
+}
+
+/*//////////////////Footer////////////////*/
+#copyright {
+	margin: 2em 30%;
+	color: #bbb;
+}
+
+/*//////////// MEDIA QUERY FOR TABLET ///////////////*/
+
+@media screen and (max-width: 800px){
+	#nav {
+		display:none;
+	}
+
+	.hamburger, .cross, .menu {
+		display: block;
+	}
+
+	.hamburger{
+	  	background:none;
+	  	position:absolute;
+	  	top:0;
+	  	right:0;
+	  	line-height:45px;
+	  	padding:0px 15px 0px 15px;
+	  	color:#fff;
+	  	border:0;
+	  	font-size:1.4em;
+	  	font-weight:bold;
+	  	cursor:pointer;
+	  	outline:none;
+	  	z-index:10000000000000;
+	}
+
+	.cross{
+	  	background:none;
+	  	position:absolute;
+	  	top:0px;
+	  	right:0;
+	  	padding:0px 15px 0px 15px;
+	  	color:#fff;
+	  	border:0;
+	  	font-size:3em;
+	  	line-height:65px;
+	  	font-weight:bold;
+	  	cursor:pointer;
+	  	outline:none;
+	  	z-index:2;
+	}
+	.menu{z-index:1000000; font-weight:bold; font-size:0.8em; width:100%; background:#000000;  position:absolute; text-align:center;}
+	.menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none;}
+	.menu li {display: block;   padding:15px 0 15px 0; border-bottom:#1d1f20 1px solid;}
+	.menu li:hover{display: block;    background:#181818; padding:15px 0 15px 0; border-bottom:#1d1f20 1px solid;}
+	.menu ul li a { text-decoration:none;  margin: 0px; color:#fff;}
+	.menu ul li a:hover {  color: #fff; text-decoration:none;}
+	.menu a{text-decoration:none; color:white;}
+	.menu a:hover{text-decoration:none; color:white;}
+
+	#sign {
+		width: 100%;
+		margin: 4em auto;
+	}
+
+	table[id="dateBlock"] {
+		max-width: 50%;
+  		margin:0 auto;
+	}
+
+
+	table[id="countdown"]{
+	  width: 80%;
+	}
+
+	.event_container { 
+		width: 90%; margin: 0 auto; 
+	}
+
+	form {
+		margin: .5em 7em;	
+	}
+
+	.attendees_container { 
+		height: 40vh;
+		width: 80%;
+		margin: .5em auto; 
+	}
+
+	#copyright {
+		margin: 2em 20%;
+		color: #bbb;
+	}
+
+}
+/*//////////// MEDIA QUERY FOR IPHONE ///////////////*/
+
+@media only screen and (max-width: 375px){
+
+table[id="dateBlock"] {
+		max-width: 100%;
+  		margin:0 auto;
+	}
+
+	h1 {
+	   	font-size: 2em;
+	}
+
+	h2 {
+		font-size: 1.75em;
+	}
+
+	h3 {
+		font-size: 1.25em;
+	}
+
+	h4 {
+		font-size: .9em;
+	}
+
+	table[id="countdown"]{
+	  width: 100%;
+	}
+
+	table[id="eventTable"]{
+	  width: 100%;
+	  margin: 1em auto;
+	}
+
+	tbody[id="events"] {
+	  font-size: .75em;
+	  padding: .5em;
+	  text-align: left;
+	}
+
+	#dateCol, #eventCol, #locationCol  {
+		font-size: .8em;
+	}
+
+	.quiz_container { 
+		width: 80%;
+	    padding: 1.5em;
+	}
+	#slide4 {
+		height: 100vh;
+	}
+
+	p, .answers {
+	   	font-size: 1em;
+	}
+
+	form {
+		margin: .5em 2em;	
+	}
+
+	.attendees_container { 
+		width: 90%;
+		font-size: .8em;
+	}
+
+	#copyright {
+		text-align: center;
+		margin: 2em 10%;
+		color: #bbb;
+	}
+
+}
