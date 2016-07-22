@@ -12,8 +12,6 @@ router.get('/', function(req, res){
 });
 
 router.post('/', function(req, res){
-	// console.log(req.body);
-	// res.send('hi');
 	var newAttendee = new Attendee(req.body);
 	newAttendee.save(function(err, data){
 		res.send(data);

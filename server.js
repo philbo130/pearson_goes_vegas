@@ -1,6 +1,6 @@
 
 //REQUIREMENTS
-var mongoUri 		= process.env.MONGOLAB_URI || 'mongodb://localhost/pearson_vegas',
+var mongoUri 		= process.env.MONGODB_URI || 'mongodb://localhost/pearson_vegas',
 	express      	= require('express'),
     bodyParser     	= require('body-parser'),
     mongoose       	= require('mongoose'),
@@ -20,7 +20,8 @@ app.use('/attendees', attendeesController);
 
 // LISTEN
 mongoose.connection.once('open', function(){
-app.listen(port, function() {
+	app.listen(port, function() {
     console.log('Running on port ' + port);
     })
 });
+
